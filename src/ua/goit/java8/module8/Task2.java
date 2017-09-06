@@ -1,7 +1,7 @@
 package ua.goit.java8.module8;
 
 
-import ua.goit.java8.module8.libraries.Library1;
+import ua.goit.java8.module8.libraries.Library2;
 
 /**
  * Created by Taras on 06.09.2017.
@@ -16,11 +16,11 @@ public class Task2 {
         maxAmount = myScanner.getMaxAmount();
 
         System.out.println();
-        System.out.println("************* Task1 ********************");
+        System.out.println("************* Task2 ********************");
         System.out.println();
-        Library1 library1 = new Library1(peopleCount,maxAmount);
+        Library2 library2 = new Library2(peopleCount,maxAmount);
         try {
-            library1.work();
+            library2.work();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
