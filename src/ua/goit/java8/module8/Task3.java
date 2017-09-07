@@ -8,8 +8,8 @@ import ua.goit.java8.module8.geometry.Geometry1;
  * Created by t.oleksiv on 07/09/2017.
  */
 public class Task3 extends Application{
-    public static final int WIDTH = 900;
-    public static final int HEIGHT = 825;
+    public static final int WIDTH = 800;
+    public static final int HEIGHT = 800;
 
     public static void main(String[] args) {
         launch(args);

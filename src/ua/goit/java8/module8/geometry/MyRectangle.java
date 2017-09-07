@@ -4,28 +4,25 @@ import javafx.application.Platform;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+import ua.goit.java8.module8.Task3;
 
 /**
  * Created by t.oleksiv on 07/09/2017.
  */
 public class MyRectangle extends Rectangle implements Runnable{
     private Pane root;
-    //private double x;
-    //private double y;
-    //private double width;
-    //private double height;
-    private Color color;
-    private int type;
+    private double xStart;
+    private double yStart;
+    private boolean typeX;
+    private boolean typeY;
 
-    public MyRectangle(Pane root, double x, double y, double width, double height, Color color, int type){
+    public MyRectangle(Pane root, double x, double y, double width, double height, Color color, boolean typeX, boolean typeY){
         super(x, y, width, height);
         this.root = root;
-        this.type = type;
-        //this.x = x;
-        //this.y = y;
-        //this.width = width;
-        //this.height = height;
-        //this.color = color;
+        this.xStart = x;
+        this.yStart = y;
+        this.typeX = typeX;
+        this.typeY = typeY;
         this.setFill(color);
         Platform.runLater(() -> {
             root.getChildren().addAll(this);
@@ -34,32 +31,24 @@ public class MyRectangle extends Rectangle implements Runnable{
 
     @Override
     public void run() {
+        int count = 0;
 
-        while(true) {
+        while(count < 400) {
             final double x = this.getTranslateX();
             final double y = this.getTranslateY();
 
             Platform.runLater(() -> {
-                switch (type){
-                    case 1:
-                        this.setTranslateX(x+1);
-                        this.setTranslateY(y+1);
-                        break;
-                    case 2:
-                        this.setTranslateX(x+1);
-                        this.setTranslateY(y-1);
-                        break;
-                    case 3:
-                        this.setTranslateX(x-1);
-                        this.setTranslateY(y+1);
-                        break;
-                    case 4:
-                        this.setTranslateX(x-1);
-                        this.setTranslateY(y-1);
-                        break;
-                    default:
-                        this.setTranslateX(x+1);
-                        this.setTranslateY(y+1);
+
+                if (typeX){
+                    this.setTranslateX(x+1);
+                } else {
+                    this.setTranslateX(x-1);
+                }
+
+                if (typeY){
+                    this.setTranslateY(y+1);
+                } else {
+                    this.setTranslateY(y-1);
                 }
             });
 
@@ -68,6 +57,18 @@ public class MyRectangle extends Rectangle implements Runnable{
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+            count++;
+            checkType();
+        }
+    }
+
+    private void checkType(){
+        if (xStart+this.getTranslateX()+this.getWidth() + 20 >= Task3.WIDTH || xStart+this.getTranslateX() <= 0){
+            typeX = !typeX;
+        }
+
+        if (yStart+this.getTranslateY()+this.getHeight() + 40 >= Task3.HEIGHT || yStart+this.getTranslateY() <= 0){
+            typeY = !typeY;
         }
     }
 
