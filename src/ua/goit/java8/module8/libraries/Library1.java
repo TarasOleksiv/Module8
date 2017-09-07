@@ -6,7 +6,7 @@ import java.util.concurrent.Semaphore;
 /**
  * Created by Taras on 06.09.2017.
  */
-public class Library1 {
+public class Library1{
     private int peopleCount;
     private int maxAmount;
     private final Semaphore semaphore;
