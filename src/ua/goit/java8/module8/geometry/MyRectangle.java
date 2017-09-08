@@ -33,6 +33,7 @@ public class MyRectangle extends Rectangle implements Runnable{
     public void run() {
         int count = 0;
 
+        // лічильник потоку налаштований так, щоб потік завершив роботу через 40 секунд
         while(count < 400) {
             final double x = this.getTranslateX();
             final double y = this.getTranslateY();
@@ -62,6 +63,7 @@ public class MyRectangle extends Rectangle implements Runnable{
         }
     }
 
+    // перевірка чи прямокутник досягнув межі сцени
     private void checkType(){
         if (xStart+this.getTranslateX()+this.getWidth() + 20 >= Task3.WIDTH || xStart+this.getTranslateX() <= 0){
             typeX = !typeX;

@@ -36,9 +36,12 @@ public class Geometry1 {
     }
 
     private void drawRectangles(){
+
+        // кількість прямокутників рендомна від 3 до 10
         int count = random.nextInt(8) + 3;
         MyRectangle[] myRectangles = new MyRectangle[count];
         for (MyRectangle myRectangle: myRectangles){
+            // малюєм прямокутник
             drawRectangle();
         }
     }
@@ -52,6 +55,8 @@ public class Geometry1 {
         int typeYint = random.nextInt(2)+1;
         boolean typeX = (typeXint == 1);
         boolean typeY = (typeYint == 1);
+
+        // запуск потоку нового прямокутника
         new Thread(new MyRectangle(root,x,y,width,height,getColor(),typeX,typeY)).start();
 
     }
