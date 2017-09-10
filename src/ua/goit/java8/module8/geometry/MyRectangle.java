@@ -4,7 +4,7 @@ import javafx.application.Platform;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
-import ua.goit.java8.module8.Task3;
+import ua.goit.java8.module8.TaskGeometry1;
 
 /**
  * Created by t.oleksiv on 07/09/2017.
@@ -65,11 +65,11 @@ public class MyRectangle extends Rectangle implements Runnable{
 
     // перевірка чи прямокутник досягнув межі сцени
     private void checkType(){
-        if (xStart+this.getTranslateX()+this.getWidth() + 20 >= Task3.WIDTH || xStart+this.getTranslateX() <= 0){
+        if (xStart+this.getTranslateX()+this.getWidth() + 20 >= TaskGeometry1.WIDTH || xStart+this.getTranslateX() <= 0){
             typeX = !typeX;
         }
 
-        if (yStart+this.getTranslateY()+this.getHeight() + 40 >= Task3.HEIGHT || yStart+this.getTranslateY() <= 0){
+        if (yStart+this.getTranslateY()+this.getHeight() + 40 >= TaskGeometry1.HEIGHT || yStart+this.getTranslateY() <= 0){
             typeY = !typeY;
         }
     }

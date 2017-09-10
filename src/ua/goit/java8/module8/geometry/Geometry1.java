@@ -5,7 +5,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import ua.goit.java8.module8.Task3;
+import ua.goit.java8.module8.TaskGeometry1;
 
 import java.util.Random;
 
@@ -47,10 +47,10 @@ public class Geometry1 {
     }
 
     private void drawRectangle(){
-        double x = random.nextInt((int) Task3.WIDTH/2);
-        double y = random.nextInt((int)Task3.HEIGHT/2);
-        double width = random.nextInt((int)Task3.WIDTH/2);
-        double height = random.nextInt((int)Task3.HEIGHT/2);
+        double x = random.nextInt((int) TaskGeometry1.WIDTH/2);
+        double y = random.nextInt((int) TaskGeometry1.HEIGHT/2);
+        double width = random.nextInt((int) TaskGeometry1.WIDTH/2);
+        double height = random.nextInt((int) TaskGeometry1.HEIGHT/2);
         int typeXint = random.nextInt(2)+1;
         int typeYint = random.nextInt(2)+1;
         boolean typeX = (typeXint == 1);

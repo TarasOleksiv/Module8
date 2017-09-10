@@ -6,7 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import ua.goit.java8.module8.Task4;
+import ua.goit.java8.module8.TaskGeometry2;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -97,11 +97,11 @@ public class Geometry2 {
 
     // перевірка чи прямокутник досягнув межі сцени
     private void checkType(MyRectangle2 myRectangle2){
-        if (myRectangle2.getxStart()+myRectangle2.getTranslateX()+myRectangle2.getWidth() + 20 >= Task4.WIDTH || myRectangle2.getxStart()+myRectangle2.getTranslateX() <= 0){
+        if (myRectangle2.getxStart()+myRectangle2.getTranslateX()+myRectangle2.getWidth() + 20 >= TaskGeometry2.WIDTH || myRectangle2.getxStart()+myRectangle2.getTranslateX() <= 0){
             myRectangle2.setTypeX(!myRectangle2.getTypeX());
         }
 
-        if (myRectangle2.getyStart()+myRectangle2.getTranslateY()+myRectangle2.getHeight() + 40 >= Task4.HEIGHT || myRectangle2.getyStart()+myRectangle2.getTranslateY() <= 0){
+        if (myRectangle2.getyStart()+myRectangle2.getTranslateY()+myRectangle2.getHeight() + 40 >= TaskGeometry2.HEIGHT || myRectangle2.getyStart()+myRectangle2.getTranslateY() <= 0){
             myRectangle2.setTypeY(!myRectangle2.getTypeY());
         }
     }
@@ -118,10 +118,10 @@ public class Geometry2 {
     }
 
     private void drawRectangle(){
-        double x = random.nextInt((int) Task4.WIDTH/2);
-        double y = random.nextInt((int)Task4.HEIGHT/2);
-        double width = random.nextInt((int)Task4.WIDTH/2);
-        double height = random.nextInt((int)Task4.HEIGHT/2);
+        double x = random.nextInt((int) TaskGeometry2.WIDTH/2);
+        double y = random.nextInt((int) TaskGeometry2.HEIGHT/2);
+        double width = random.nextInt((int) TaskGeometry2.WIDTH/2);
+        double height = random.nextInt((int) TaskGeometry2.HEIGHT/2);
         int typeXint = random.nextInt(2)+1;
         int typeYint = random.nextInt(2)+1;
         boolean typeX = (typeXint == 1);
@@ -145,10 +145,10 @@ public class Geometry2 {
     }
 
     private MyRectangle2 drawRectangle2(){
-        double x = random.nextInt((int) Task4.WIDTH/2);
-        double y = random.nextInt((int)Task4.HEIGHT/2);
-        double width = random.nextInt((int)Task4.WIDTH/2);
-        double height = random.nextInt((int)Task4.HEIGHT/2);
+        double x = random.nextInt((int) TaskGeometry2.WIDTH/2);
+        double y = random.nextInt((int) TaskGeometry2.HEIGHT/2);
+        double width = random.nextInt((int) TaskGeometry2.WIDTH/2);
+        double height = random.nextInt((int) TaskGeometry2.HEIGHT/2);
         int typeXint = random.nextInt(2)+1;
         int typeYint = random.nextInt(2)+1;
         boolean typeX = (typeXint == 1);

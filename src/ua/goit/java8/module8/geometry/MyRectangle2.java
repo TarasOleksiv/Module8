@@ -4,7 +4,6 @@ import javafx.application.Platform;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
-import ua.goit.java8.module8.Task3;
 
 /**
  * Created by t.oleksiv on 07/09/2017.
